@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "DuckDuckGo New Tab Page",
+    "description": "Add DuckDuckGo to every new tab!",
+    "version": "1.0.0",
+    "icons": {
+        "16": "img/icon_16.png",
+        "48": "img/icon_48.png",
+        "128": "img/icon_128.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "duckduckgo-tab.html"
+    },
+    "background": {
+        "scripts": ["js/duckduckgo-tab.js"]
+    },
+    "permissions": [
+        "storage"
+    ],
+    "applications": {
+        "gecko": {
+            "strict_min_version": "57.0"
+        }
+    }
+}
