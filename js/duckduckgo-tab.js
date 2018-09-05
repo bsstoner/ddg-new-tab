@@ -1,1 +1,0 @@
-DDG.page = new DDG.Pages.Home();

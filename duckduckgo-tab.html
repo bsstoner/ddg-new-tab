@@ -3,50 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>New Tab</title>
-    <meta name="description" content="Add DuckDuckGo to every new tab!">
-    <meta name="author" content="DuckDuckGo - https://duckduckgo.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://duckduckgo.com/s1679.css" type="text/css">
-    <link rel="stylesheet" href="https://duckduckgo.com/o1679.css" type="text/css">
-    <link rel="stylesheet" href="/css/ddg-tab.css" type="text/css">
+    <title>DuckDuckGo New Tab</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 </head>
 
-<body id="pg-index" class="page-index body--home body--onboarding">
-    <div class="site-wrapper  site-wrapper--home  js-site-wrapper">
-        <div id="" class="content-wrap--home">
-            <div id="content_homepage" class="content--home">
-                <div class="cw--c">
-                    <div class="logo-wrap--home">
-                        <a id="logo_homepage_link" class="logo_homepage" href="https://duckduckgo.com/about">
-                            About DuckDuckGo
-                            <span class="logo_homepage__tt">Learn More</span>
-                        </a>
-                    </div>
+<body class="container">
+    <img class="background-image d-block" src="/img/alpinist.svg">
+    <div class="content-wrap">
+        <a class="logo_homepage d-block" href="https://duckduckgo.com/about">
+            <span class="logo_homepage__tt">Learn More</span>
+        </a>
 
-                    <div class="search-wrap--home">
-                        <form id="search_form_homepage" class="search--home  js-search-form search--adv search--focus" name="x" method="GET" action="https://duckduckgo.com/">
-                            <input id="search_form_input_homepage" class="js-search-input search__input--adv" type="text" autocomplete="off" name="q" tabindex="1" value="" autocapitalize="off" autocorrect="off">
-                            <input id="search_button_homepage" class="search__button  js-search-button" type="submit" tabindex="2" value="Search">
-                            <input id="search_form_input_clear" class="search__clear  empty  js-search-clear" type="button" tabindex="3" value="X">
-                            <div id="search_elements_hidden" class="search__hidden  js-search-hidden"><input type="hidden" class="js-search-hidden-field" name="t" value="ffnt"></div>
-                            <div class="search__autocomplete" style="position: absolute; display: none;">
-                                <div class="acp-wrap"></div>
-                                <div class="acp-footer is-hidden">
-                                    <span class="acp-footer__instructions">Select a !bang for a direct site search</span>
-                                    <span class="acp-footer__link">
-                                        <a class="no-visited" href="/bang">More about !bangs</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div> <!-- cw -->
-            </div> <!-- content_homepage //-->
-        </div> <!-- content_wrapper_homepage //-->
+        <div class="search_form_wrap">
+            <form class="search js-search-form d-flex" name="x" method="GET" action="https://duckduckgo.com/">
+                <input class="js-search-input search__input" type="text" autocomplete="off" name="q" tabindex="1" placeholder="Search anonymously" autocapitalize="off" autocorrect="off">
+                <button class="btn icon search__clear js-search-clear" type="reset" tabindex="3">X</button>
+                <button class="btn icon search__button js-search-button" type="submit" tabindex="2"></button>
+                <div class="search__hidden  js-search-hidden">
+                    <input type="hidden" class="js-search-hidden-field" name="t" value="ffnt">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
-
 </html>

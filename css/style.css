@@ -1,0 +1,131 @@
+body {
+    background-color: #c6e0f8;
+    overflow: hidden;
+    font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Segoe UI", "Nimbus Sans L", "Liberation Sans", "Open Sans", FreeSans, Arial, sans-serif;
+}
+
+.background-image {
+    position: absolute;
+    max-height: 498px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -99;
+}
+
+.content-wrap {
+    margin-top: 25vh;
+}
+
+.logo_homepage {
+    margin: auto;
+    margin-bottom: 40px;
+    width: 185px;
+    height: 145px;
+    background-image: url("/img/logo-homepage.svg");
+    background-size: 185px 145px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.logo_homepage__tt {
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    height: 1.6em;
+    transition-delay: 0s;
+    transition: opacity .3s ease-in-out 0s;
+    border-radius: 2px;
+    visibility: hidden;
+    opacity: 0;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    margin: auto;
+    background-color: #a3a3a3;
+    background-color: rgba(138,138,138,0.9);
+    text-indent: 0px;
+    padding: 0 1em;
+    white-space: nowrap;
+    line-height: 1.6;
+    height: 1.6em;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    z-index: 200;
+}
+
+.logo_homepage__tt:before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: -4px;
+    left: -4px;
+    top: 50%;
+    border: 4px solid transparent;
+    border-left-width: 0;
+    border-right-color: #a3a3a3;
+    border-right-color: rgba(138,138,138,0.9)
+}
+
+.search_form_wrap {
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+}
+
+.search {
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 1.14em;
+    padding-left: .75em;
+}
+
+.search__input {
+    appearance: none;
+    font-size: 1.1em;
+    font-weight: normal;
+    color: #333;
+    display: block;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    height: 2.54545em;
+    z-index: 1;
+    position: relative;
+    top: -1px;
+}
+
+.icon {
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.search__button {
+    background-color: #5b9e4d;
+    box-sizing: initial;
+    width: 32px;
+    padding: 0 9px;
+    border-radius: 0 6px 6px 0;
+    background-image: url('/img/loupe-light.svg');
+}
+
+.search__button:hover {
+    background-image: url('/img/loupe-light.svg');
+    background-color: #66ad57;
+}
+
+.search__input:placeholder-shown ~ .search__button {
+    background-color: transparent;
+    background-image: url('/img/loupe-dark.svg');
+}
+
+.search__input:placeholder-shown + .search__clear {
+    display: none;
+}
