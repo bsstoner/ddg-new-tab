@@ -74,7 +74,7 @@ body {
 
 .search_form_wrap {
     width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 22px;
     border-radius: 6px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
 }
@@ -132,4 +132,10 @@ body {
 
 .search__input:placeholder-shown + .search__clear {
     display: none;
+}
+
+.tagline {
+    font-size: 16px;
+    text-align: center;
+    color: #230545;
 }
