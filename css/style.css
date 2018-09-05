@@ -1,7 +1,11 @@
+body, input {
+ font-family: "DDG_ProximaNova", "Proxima Nova", "Helvetica Neue", "Helvetica", "Segoe UI", "Nimbus Sans L", "Liberation Sans", "Open Sans", FreeSans, Arial, sans-serif;
+ color:#333
+}
+
 body {
     background-color: #c6e0f8;
     overflow: hidden;
-    font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Segoe UI", "Nimbus Sans L", "Liberation Sans", "Open Sans", FreeSans, Arial, sans-serif;
 }
 
 .background-image {
@@ -85,23 +89,23 @@ body {
 }
 
 .search__input {
+    flex-grow: 1;
+    font-size: 16px;
+    padding: 0;
+    color: #311753;
     appearance: none;
-    font-size: 1.1em;
-    font-weight: normal;
-    color: #333;
-    display: block;
-    width: 100%;
     background: none;
     outline: none;
     border: none;
-    padding: 0;
-    height: 2.54545em;
+    line-height: normal;
+    letter-spacing: -0.1px;
     z-index: 1;
-    position: relative;
-    top: -1px;
 }
 
 .icon {
+    box-sizing: initial;
+    width: 32px;
+    padding: 0 9px;
     background-color: transparent;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -109,16 +113,16 @@ body {
 
 .search__button {
     background-color: #5b9e4d;
-    box-sizing: initial;
-    width: 32px;
-    padding: 0 9px;
     border-radius: 0 6px 6px 0;
     background-image: url('/img/loupe-light.svg');
 }
 
 .search__button:hover {
-    background-image: url('/img/loupe-light.svg');
     background-color: #66ad57;
+}
+
+.search__clear {
+    background-image: url('/img/clear.svg');
 }
 
 .search__input:placeholder-shown ~ .search__button {

@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "DuckDuckGo New Tab Page",
     "description": "Add DuckDuckGo to every new tab!",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icons": {
         "16": "img/icon_16.png",
         "48": "img/icon_48.png",
@@ -19,6 +19,7 @@
     ],
     "applications": {
         "gecko": {
+            "id": "{b8e43b76-2ba7-445e-8cd0-f16c131e35b2}",
             "strict_min_version": "57.0"
         }
     }
