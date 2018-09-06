@@ -5,11 +5,11 @@ body, input {
 
 body {
     background-color: #cbdeef;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .background-image {
-    position: absolute;
+    position: fixed;
     max-height: 498px;
     bottom: 0;
     left: 0;
