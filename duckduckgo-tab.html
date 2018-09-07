@@ -31,13 +31,17 @@
 
             <div id="widgets" class="widgets_wrap">
                 <div id="weather-widget" class="card mb-3">
-                    <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+                    <div class="card-header bg-transparent d-flex align-items-center">
                         <span>Today's Weather</span>
+                        <!-- <input v-model="weatherLocation" class="form-control w-50 ml-auto" type="text" name="weather-location" id="weather-location" placeholder="Enter location"> -->
+                        <!-- <button type="submit" class="btn btn-primary mb-2">Go!</button> -->
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                            content.</p>
+						<template
+							v-if="this.weatherData"
+						>
+							{{weatherData.currently.summary}}
+						</template>
                     </div>
                     <div class="card-footer">More</div>
                 </div>
@@ -53,55 +57,61 @@
                             </span>
                         </div>
                         <div class="card-body p-0">
-                            <div
-                                v-if="currentPrice"
-                                class="row no-gutters"
-                            >
-                                <div class="col-4">
-                                    <div class="crypto__col__content">
-                                        <div class="crypto__col__header d-flex align-items-center">
-                                            <img src="/img/widgets/crypto/bitcoin.svg" alt="Bitcoin Logo">
-                                            <span class="ml-2">Bitcoin</span>
-                                        </div>
-                                        <crypto-price
-                                            :current="currentPrice.BTC"
-                                        ></crypto-price>
+                            <div class="row no-gutters">
+                                <template
+                                    v-if="currentPrice"
+                                >
+                                    <div class="col-4">
+                                        <div class="crypto__col__content">
+                                            <div class="crypto__col__header d-flex align-items-center">
+                                                <img src="/img/widgets/crypto/bitcoin.svg" alt="Bitcoin Logo">
+                                                <span class="ml-2">Bitcoin</span>
+                                            </div>
+                                            <crypto-price
+                                                :current="currentPrice.BTC"
+                                            ></crypto-price>
 
-                                        <crypto-chart
-                                            symbol="BTC"
-                                        ></crypto-chart>
+                                            <crypto-chart
+                                                symbol="BTC"
+                                            ></crypto-chart>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-4">
-                                    <div class="crypto__col__content">
-                                        <div class="crypto__col__header d-flex align-items-center">
-                                            <img src="/img/widgets/crypto/bitcoin-cash.svg" alt="Bitcoin Cash Logo">
-                                            <span class="ml-2">Bitcoin Cash</span>
+                                    <div class="col-4">
+                                        <div class="crypto__col__content">
+                                            <div class="crypto__col__header d-flex align-items-center">
+                                                <img src="/img/widgets/crypto/bitcoin-cash.svg" alt="Bitcoin Cash Logo">
+                                                <span class="ml-2">Bitcoin Cash</span>
+                                            </div>
+                                            <crypto-price
+                                                :current="currentPrice.BCC"
+                                            ></crypto-price>
+
+                                            <crypto-chart
+                                                symbol="BCC"
+                                            ></crypto-chart>
                                         </div>
-                                        <crypto-price
-                                            :current="currentPrice.BCC"
-                                        ></crypto-price>
-
-                                        <crypto-chart
-                                            symbol="BCC"
-                                        ></crypto-chart>
                                     </div>
-                                </div>
 
-                                <div class="col-4">
-                                    <div class="crypto__col__content">
-                                        <div class="crypto__col__header d-flex align-items-center">
-                                            <img src="/img/widgets/crypto/ethereum.svg" alt="Ethereum Logo">
-                                            <span class="ml-2">Etherium</span>
+                                    <div class="col-4">
+                                        <div class="crypto__col__content">
+                                            <div class="crypto__col__header d-flex align-items-center">
+                                                <img src="/img/widgets/crypto/ethereum.svg" alt="Ethereum Logo">
+                                                <span class="ml-2">Etherium</span>
+                                            </div>
+                                            <crypto-price
+                                                :current="currentPrice.ETH"
+                                            ></crypto-price>
+
+                                            <crypto-chart
+                                                symbol="ETH"
+                                            ></crypto-chart>
                                         </div>
-                                        <crypto-price
-                                            :current="currentPrice.ETH"
-                                        ></crypto-price>
-
-                                        <crypto-chart
-                                            symbol="ETH"
-                                        ></crypto-chart>
+                                    </div>
+                                </template>
+                                <div v-else>
+                                    <div class="col text-center">
+                                        <h5 class="card-title py-3 mt-2">Loading...</h5>
                                     </div>
                                 </div>
                             </div>

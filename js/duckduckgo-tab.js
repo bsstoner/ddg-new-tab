@@ -1,3 +1,7 @@
+/***************************
+ CRYPTO WIDGET
+ **************************/
+
 Vue.component("crypto-price", {
     props: ["current"],
     data() {
@@ -80,4 +84,49 @@ var cryptoWidget = new Vue({
             });
           });
     }
+});
+
+/***************************
+ WEATHER WIDGET
+ **************************/
+
+ function ddg_spice_forecast(json) {
+	console.log(json);
+ }
+
+ var weatherWidget = new Vue({
+    el: '#weather-widget',
+    data: {
+		weatherData: null
+	},
+    created() {
+		if ("geolocation" in navigator) {
+			navigator.geolocation.getCurrentPosition(
+				function onGeoSucces(pos) {
+					// get current weather for location
+					var lat = pos.coords.latitude;
+					var lon = pos.coords.longitude;
+					var latLon = encodeURIComponent(`${lat},${lon}`);
+
+					// requires CORS proxy for dev
+					// production would use a realy proxy so API key isn't leaked :)
+					fetch(`https://api.darksky.net/forecast/${APIKEY}/${latLon}`)
+						.then(response => {
+							console.log(response);
+
+							return response.json();
+						})
+						.then(json => {
+							console.log(json);
+							this.weatherData = json;
+						});
+
+				},
+				function onGeoError(err) {
+					console.log(err);
+				});
+		} else {
+			/* geolocation IS NOT available */
+		}
+	}
 });
