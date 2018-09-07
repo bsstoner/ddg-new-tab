@@ -17,20 +17,11 @@
     "permissions": [
         "storage"
     ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
     "applications": {
         "gecko": {
             "id": "{b8e43b76-2ba7-445e-8cd0-f16c131e35b2}",
             "strict_min_version": "57.0"
         }
-    },
-    "chrome_settings_overrides": {
-      "search_provider": {
-        "favicon_url": "https://duckduckgo.com/favicon.ico",
-        "is_default": true,
-        "keyword": "duckduckgo.com",
-        "name": "DuckDuckGo",
-        "search_url": "https://duckduckgo.com/?q={searchTerms}",
-        "suggest_url": "https://duckduckgo.com/ac/?q={searchTerms}&type=list"
-      }
     }
 }

@@ -73,6 +73,10 @@ body {
     border-right-color: rgba(138,138,138,0.9)
 }
 
+/*****************
+  SEARCH BOX
+ *****************/
+
 .search_form_wrap {
     margin: 0 auto 22px;
     border-radius: 6px;
@@ -143,4 +147,71 @@ body {
     font-size: 16px;
     text-align: center;
     color: #230545;
+}
+
+/*****************
+  WIDGETS
+ *****************/
+
+.card {
+     color: #38475c;
+}
+
+.card-header {
+    border-bottom-color: #eee;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.crypto__date {
+    font-size: 14px;
+    color: #979ea6;
+}
+
+.crypto__time-range {
+    box-sizing: border-box;
+    width: 36px;
+    height: 22px;
+    background-color: #c0c3c7;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.crypto__col__header {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.crypto__col__content {
+    padding: 27px 29px;
+}
+
+.crypto__price {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.crypto__chart {
+    width: 100%;
+}
+
+.crypto__chart--btc .ct-line {
+    stroke: #f79826
+}
+
+.crypto__chart--bcc .ct-line {
+    stroke: #8dc351
+}
+
+.crypto__chart--eth .ct-line {
+    stroke: #6f7cba
+}
+
+.crypto__price-change {
+    font-size: 13px;
+    font-weight: 600;
+    color: #646d82;
 }

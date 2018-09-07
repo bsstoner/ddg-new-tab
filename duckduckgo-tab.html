@@ -1,33 +1,122 @@
 <!doctype html>
-<html class="js no-touch opacity csstransforms3d csstransitions svg cssfilters is-not-mobile-device" lang="en_US">
-
+<html lang="en_US">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>DuckDuckGo New Tab</title>
+    <link rel="stylesheet" href="/css/chartist.min.css" type="text/css">
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="/css/font.css" type="text/css">
+    <link rel="stylesheet" href="/css/fonts.css" type="text/css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/icon_128.png">
 </head>
 
-<body class="container">
-    <img class="background-image d-block" src="/img/alpinist.svg">
-    <div class="content-wrap">
-        <a class="logo_homepage d-block" href="https://duckduckgo.com/about">
-            <span class="logo_homepage__tt">Learn More</span>
-        </a>
+<body>
+    <img class="background-image d-block" src="/img/backgrounds/alpinist.svg">
+    <div class="container">
+        <div class="content-wrap mx-auto">
+            <a class="logo_homepage d-block" href="https://duckduckgo.com/about">
+                <span class="logo_homepage__tt">Learn More</span>
+            </a>
 
-        <div class="search_form_wrap">
-            <form class="search js-search-form d-flex" name="x" method="GET" action="https://duckduckgo.com/">
-                <input class="js-search-input search__input" type="text" autocomplete="off" name="q" tabindex="1" placeholder="Search anonymously" autocapitalize="off" autocorrect="off">
-                <button class="btn icon search__clear js-search-clear" type="reset" tabindex="3"></button>
-                <button class="btn icon search__button js-search-button" type="submit" tabindex="2"></button>
-                <div class="search__hidden  js-search-hidden">
-                    <input type="hidden" class="js-search-hidden-field" name="t" value="ffnt">
+            <div class="search_form_wrap">
+                <form class="search js-search-form d-flex" name="x" method="GET" action="https://duckduckgo.com/">
+                    <input class="js-search-input search__input" type="text" autocomplete="off" name="q" tabindex="1" placeholder="Search anonymously" autocapitalize="off" autocorrect="off" required="required">
+                    <button class="btn icon search__clear js-search-clear" type="reset" tabindex="3"></button>
+                    <button class="btn icon search__button js-search-button" type="submit" tabindex="2"></button>
+                    <input class="d-none" type="hidden" name="t" value="ffnt">
+                </form>
+            </div>
+            <p class="tagline">The search engine that doesn't track you.</p>
+
+            <div id="widgets" class="widgets_wrap">
+                <div id="weather-widget" class="card mb-3">
+                    <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+                        <span>Today's Weather</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Success card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                    </div>
+                    <div class="card-footer">More</div>
                 </div>
-            </form>
+
+                <div id="crypto-widget" class="card mb-3">
+                        <div class="card-header bg-transparent row align-items-center">
+                            <span class="col crypto__date">{{date}}</span>
+                            <span class="col text-center">Crypto Prices</span>
+                            <span class="col text-right">
+                                <button type="button" class="btn p-1 crypto__time-range d-inline-flex align-items-center justify-content-center">
+                                    <span>24h</span>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="card-body p-0">
+                            <div
+                                v-if="currentPrice"
+                                class="row no-gutters"
+                            >
+                                <div class="col-4">
+                                    <div class="crypto__col__content">
+                                        <div class="crypto__col__header d-flex align-items-center">
+                                            <img src="/img/widgets/crypto/bitcoin.svg" alt="Bitcoin Logo">
+                                            <span class="ml-2">Bitcoin</span>
+                                        </div>
+                                        <crypto-price
+                                            :current="currentPrice.BTC"
+                                        ></crypto-price>
+
+                                        <crypto-chart
+                                            symbol="BTC"
+                                        ></crypto-chart>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="crypto__col__content">
+                                        <div class="crypto__col__header d-flex align-items-center">
+                                            <img src="/img/widgets/crypto/bitcoin-cash.svg" alt="Bitcoin Cash Logo">
+                                            <span class="ml-2">Bitcoin Cash</span>
+                                        </div>
+                                        <crypto-price
+                                            :current="currentPrice.BCC"
+                                        ></crypto-price>
+
+                                        <crypto-chart
+                                            symbol="BCC"
+                                        ></crypto-chart>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="crypto__col__content">
+                                        <div class="crypto__col__header d-flex align-items-center">
+                                            <img src="/img/widgets/crypto/ethereum.svg" alt="Ethereum Logo">
+                                            <span class="ml-2">Etherium</span>
+                                        </div>
+                                        <crypto-price
+                                            :current="currentPrice.ETH"
+                                        ></crypto-price>
+
+                                        <crypto-chart
+                                            symbol="ETH"
+                                        ></crypto-chart>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">More</div>
+                </div>
+
+                <div id="reddit-widget" class="widget"></div>
+            </div>
         </div>
-        <p class="tagline">The search engine that doesn't track you.</p>
     </div>
+
+    <script src="/js/moment.min.js"></script>
+    <script src="/js/chartist.min.js"></script>
+    <script src="/js/vue.js"></script>
+    <script src="/js/duckduckgo-tab.js"></script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <rect id="a" width="1.5" height="14" x="11.5" y="-.438" rx=".75"/>
+        <path id="b" d="M16.25-.438a.75.75 0 0 1 .75.75v12.5a.75.75 0 1 1-1.5 0V.312a.75.75 0 0 1 .75-.75z"/>
+        <rect id="c" width="1.5" height="14" x="3.5" y="-.438" rx=".75"/>
+        <rect id="d" width="1.5" height="14" x="19.366" y="-.438" rx=".75"/>
+        <rect id="e" width="1.5" height="14" x="23.366" y="-.438" rx=".75"/>
+        <rect id="f" width="1.5" height="14" x="7.5" y="-.438" rx=".75"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="rotate(30 -29.9 35.856)">
+            <use fill="#78A0EF" xlink:href="#a"/>
+            <use fill="#73B0FF" xlink:href="#a"/>
+        </g>
+        <g transform="rotate(30 -25.9 35.856)">
+            <use fill="#78A0EF" xlink:href="#b"/>
+            <use fill="#73B0FF" xlink:href="#b"/>
+        </g>
+        <g transform="rotate(30 -37.9 35.856)">
+            <use fill="#78A0EF" xlink:href="#c"/>
+            <use fill="#73B0FF" xlink:href="#c"/>
+        </g>
+        <g transform="rotate(30 -22.035 35.856)">
+            <use fill="#78A0EF" xlink:href="#d"/>
+            <use fill="#73B0FF" xlink:href="#d"/>
+        </g>
+        <g transform="rotate(30 -18.035 35.856)">
+            <use fill="#78A0EF" xlink:href="#e"/>
+            <use fill="#73B0FF" xlink:href="#e"/>
+        </g>
+        <g transform="rotate(30 -33.9 35.856)">
+            <use fill="#78A0EF" xlink:href="#f"/>
+            <use fill="#73B0FF" xlink:href="#f"/>
+        </g>
+        <g fill="#DADADA">
+            <path d="M33.851 17c-.497-1.872-2.188-3.25-4.196-3.25-.412 0-.81.058-1.188.166C27.098 11.015 24.09 9 20.6 9c-4.735 0-8.581 3.707-8.654 8.306A7 7 0 0 0 14 31h20a7 7 0 0 0 0-14h-.149z"/>
+        </g>
+    </g>
+</svg>

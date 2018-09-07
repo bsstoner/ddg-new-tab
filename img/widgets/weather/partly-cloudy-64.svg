@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FBB327" d="M52 25.5C52 32.956 45.956 39 38.5 39S25 32.956 25 25.5 31.044 12 38.5 12 52 18.044 52 25.5z"/>
+        <g fill="#FBB327" transform="translate(37 5)">
+            <rect width="3" height="5" rx="1.5"/>
+            <rect width="3" height="5" y="36" rx="1.5"/>
+        </g>
+        <g fill="#FBB327" transform="rotate(30 10.67 92.043)">
+            <rect width="3" height="5" rx="1.5"/>
+            <rect width="3" height="5" y="36" rx="1.5"/>
+        </g>
+        <g fill="#FBB327" transform="rotate(60 15.67 55.043)">
+            <rect width="3" height="5" rx="1.5"/>
+            <rect width="3" height="5" y="36" rx="1.5"/>
+        </g>
+        <g fill="#FBB327" transform="rotate(90 17.5 41.5)">
+            <rect width="3" height="5" rx="1.5"/>
+            <rect width="3" height="5" y="36" rx="1.5"/>
+        </g>
+        <g fill="#FBB327" transform="rotate(120 18.557 33.681)">
+            <rect width="3" height="5" rx="1.5"/>
+            <rect width="3" height="5" y="36" rx="1.5"/>
+        </g>
+        <g fill="#FBB327" transform="rotate(150 19.33 27.957)">
+            <rect width="3" height="5" rx="1.5"/>
+            <rect width="3" height="5" y="36" rx="1.5"/>
+        </g>
+        <path fill="#DADADA" d="M49.61 31.107a7.503 7.503 0 0 0-10.46-4.319C36.735 22.732 32.198 20 27 20c-6.967 0-12.746 4.908-13.82 11.333C7.912 32.603 4 37.344 4 43c0 6.627 5.373 12 12 12h32c6.627 0 12-5.373 12-12 0-6.081-4.524-11.106-10.39-11.893z"/>
+    </g>
+</svg>
